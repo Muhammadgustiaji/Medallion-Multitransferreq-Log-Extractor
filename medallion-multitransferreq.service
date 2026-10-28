@@ -1,0 +1,23 @@
+# ============================================================
+# MEDALLION Multitransferreq REALTIME LOG EXTRACTOR
+# Configuration         : Example systemd unit
+# OS                    : RHEL 7
+# Maintainer            : Project contributors
+# Last Update           : 27-10-2026
+# ============================================================
+
+[Unit]
+Description=Medallion Multitransferreq Real-Time Log Monitoring
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/default/medallion-multitransferreq
+ExecStart=/bin/bash /opt/log-extractor/extract_medallion_multitransferreq_log.sh
+Restart=always
+RestartSec=5
+User=logextractor
+Group=logextractor
+
+[Install]
+WantedBy=multi-user.target

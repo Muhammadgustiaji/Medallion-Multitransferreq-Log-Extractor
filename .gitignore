@@ -1,0 +1,25 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.local
+*.local.*
+*.pem
+*.key
+.aws/
+
+# Runtime logs, archives, and local data
+*.log
+*.log.*
+logs/
+data/
+*.rdb
+*.aof
+
+# Editor and OS files
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
